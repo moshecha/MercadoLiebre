@@ -1,0 +1,48 @@
+.formulario-register{
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+main{
+    margin: auto;
+}
+
+.formulario-register .form-item{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 5px;
+    color: beige;
+}
+.tipo-perfil{
+    align-self: flex-start;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.div-cards-footer{
+    display: flex;
+}
+span{color: orange;}
+
+.botones input{
+    align-self: center;
+    height: 1cm;
+    width: 400px;
+    margin: 10px;
+    background: orange;
+    border: green solid 2px;
+}
+
+.form-item h3{
+    text-decoration: underline;
+}

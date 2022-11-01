@@ -1,0 +1,261 @@
+:root {
+    --yellow: #EAC926;
+    --dark-blue: #03264C;
+    --light-blue: #1259c3;
+    --gray: #666666;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+    --base-font-family: 'Roboto', sans-serif
+  }
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    /* border:1px black solid; */
+    margin:auto;
+    padding-top:10px
+}
+header{
+    background-color: #EAC926;
+}
+.logo{
+    width: 80%;
+    margin: 0 30px;
+    padding: auto;
+}
+/* En mobile no se ve el menu */
+.lista-menu{
+    display: none;
+}
+
+main{
+width: 100%;  
+margin: auto;
+}
+
+main article{
+    margin: 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+.banner{
+width: 100%;
+height: auto;
+}
+
+p {
+    font-size: 12px
+}
+
+h2 {
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+/* Camion de Envio */
+.fa-shipping-fast{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color: #39b54a;
+
+}
+
+.descripcion-de-foto {
+    border-top: #ebebeb solid 1px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.div-precioYdescuento{
+    display: flex;
+    flex-direction: row;
+
+}
+.precio {
+    font-size: 18px;
+    flex-grow: 0.3;
+}
+
+.descuento{ 
+    font-size:16px;
+    color: var(--green);
+    flex-grow: 0.7;
+
+}
+
+.descripcion{ font-size: 16px;
+display: none; /* En mobile oculto */
+}
+
+/* borra los puntos de las listas!! */
+ul{ list-style: none; }
+
+a {
+    text-decoration:none;
+    color: var(--gray);
+  }
+
+.burger-menu {
+    text-align: center;
+}
+
+.burger-menu i {
+    color: var(--light-gray);
+    background-color: var(--light-blue) ;
+    border-style:groove;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin: auto;
+
+}
+#buscador{
+    width: 8cm;
+    border-radius: 10px;
+    position: relative;
+}
+#iconoBusqueda{
+    text-align: center;
+    border-left: #666666 solid 2px;
+    color: var(--light-blue) ;
+    padding: 5px 5px;
+    /* border-radius: 5px; */
+    margin: auto;
+    position: relative;
+    right: 38px;
+}
+
+#centrado {
+    text-align:center;
+
+}
+footer {
+    text-align: center;
+
+}
+footer i {
+    color:var(--light-blue);
+    margin: auto;
+    font-size: 1cm;
+}
+footer i:hover{
+    color: #39b54a;
+}
+footer article {
+    padding: 2em;
+}
+.Copyright{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+/* tablet */
+@media (min-width:426px) {
+    .main-header-top-var{
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        width: 20%;
+    }
+    .buscar{
+        text-align: right;
+        max-width: 350px;
+    }
+    .div-cuotas{
+        text-align: center;
+        max-width: 350px;
+        font-size: 15px; 
+    }
+
+    .lista-menu a {text-decoration:none;
+        color: black;}
+    
+
+    .lista-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+    
+    .menu-usuario{
+        display: flex;
+        padding-inline-start: 0px;
+
+    }
+    .menu-usuario li{
+        padding: 5px;
+
+    }
+    .menu-pagina{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    }
+    .menu-pagina li{
+        padding: 3px;
+    }
+    .burger-menu{
+        display: none;
+    }
+    
+    main article{
+        width: 40%;
+    }
+    main article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+    .fa-shipping-fast{
+        transition: all 1s;
+    }
+    article:hover .fa-shipping-fast{
+        transform: rotate(-90deg);
+    }
+    
+    .card-ofertas, .card-ultimas-vistas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .descripcion{
+        display: block;
+        visibility: hidden;
+    }
+    article:hover .descripcion{
+        visibility: visible; 
+    }
+}
+
+/* descktop */
+@media (min-width:796px) {
+    .items-header{
+        margin:0cm 2cm;
+    }
+    
+    main article{
+       width: 20%;
+    }
+
+}
