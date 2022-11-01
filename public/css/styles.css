@@ -16,15 +16,21 @@ header{
     width: 100%;
     /* border:1px black solid; */
     margin:auto;
-    padding-top:10px
-}
-header{
+    padding-top:10px;
     background-color: #EAC926;
+    display: flex;
+    justify-content: space-around;
+}
+.main-header-top-var{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .logo{
     width: 80%;
-    margin: 0 30px;
-    padding: auto;
+    margin: 0 30px 10px 30px;
 }
 /* En mobile no se ve el menu */
 .lista-menu{
