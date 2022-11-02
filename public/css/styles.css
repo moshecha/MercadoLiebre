@@ -21,6 +21,12 @@ header{
     display: flex;
     justify-content: space-around;
 }
+.div-cuotas{
+    text-align: center;
+    align-self: center;
+    /* max-width: 200px; */
+    font-size: 20px; 
+}
 .main-header-top-var{
     padding: 5px;
     display: flex;
@@ -40,7 +46,7 @@ header{
 main{
 width: 100%;  
 margin: auto;
-background: #f8f9fa;
+background: #d1d4da;
 }
 
 main article{
@@ -62,7 +68,7 @@ p {
 
 h2 {
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 /* Camion de Envio */
@@ -170,7 +176,7 @@ footer article {
 .Copyright{
     margin: 0px;
     padding: 0px;
-    text-align: left;
+    /* text-align: left; */
     padding-left: 20px;
 }
 
@@ -191,9 +197,7 @@ footer article {
         max-width: 350px;
     }
     .div-cuotas{
-        text-align: center;
-        max-width: 350px;
-        font-size: 15px; 
+        max-width: 200px;
     }
 
     .lista-menu a {text-decoration:none;
@@ -260,7 +264,9 @@ footer article {
     .items-header{
         margin:0cm 2cm;
     }
-    
+    .div-cuotas{
+        max-width: 290px;
+    }
     main article{
        width: 20%;
     }
