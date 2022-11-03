@@ -15,6 +15,8 @@
 header{
     width: 100%;
     /* border:1px black solid; */
+    position: fixed;
+    z-index: 10;
     margin:auto;
     padding-top:10px;
     background-color: #EAC926;
@@ -30,9 +32,10 @@ header{
 .main-header-top-var{
     padding: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: auto;
 }
 .logo{
     width: 80%;
@@ -44,13 +47,15 @@ header{
 }
 
 main{
+    padding-top: 160px;
 width: 100%;  
 margin: auto;
-background: #d1d4da;
+background: #e9ecf2;
 }
 
 main article{
     margin: 10px;
+    background: white;
 }
 
 main img {
@@ -60,6 +65,8 @@ main img {
 .banner{
 width: 100%;
 height: auto;
+border-radius: 2cm;
+border: #1259c3 solid 2px;
 }
 
 p {
@@ -158,6 +165,12 @@ a {
     text-align:center;
 
 }
+
+.dinero,  .mi-dinero{
+    display: none;
+}
+
+/* footer */
 footer {
     text-align: center;
 
@@ -207,8 +220,8 @@ footer article {
     .lista-menu{
         display: flex;
         justify-content: space-between;
-        align-items: center;
-}
+        align-items: center;    
+    }
     
     .menu-usuario{
         display: flex;
@@ -260,9 +273,52 @@ footer article {
 }
 
 /* descktop */
-@media (min-width:796px) {
+@media (min-width:1400px) {
+    .logo{
+        width: 15%;
+        margin: 0 ;
+        border: #EAC926 solid 4px;
+        padding: 8px;
+        border-radius: 0.5cm;
+        animation: agrandar 1s   infinite alternate ;
+    }
+    .logo:hover{
+        border:#1259c3 solid 4px;
+        padding: 8px;
+        border-radius: 0.5cm;
+    }
+
+    @keyframes agrandar {
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1.03);
+            box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+        }
+    }
+    li a{
+        border: #EAC926 solid 2px;
+        padding: 10px;
+
+    }
+    li:hover a{
+        color: #03264C;
+        text-decoration: none;
+        border: #1259c3 solid 2px;
+        border-radius: 20px;
+        padding: 10px;
+    }
     .items-header{
         margin:0cm 2cm;
+    }
+
+    .form-buscador:hover #buscador{
+        border: var(--green) double 3px;
+    }
+    .form-buscador:hover #iconoBusqueda{
+        color: #39b54a;
     }
     .div-cuotas{
         max-width: 290px;
@@ -270,5 +326,84 @@ footer article {
     main article{
        width: 20%;
     }
+    .main-header-top-var{
+        width: 90%;
+        justify-content: space-around;
 
+    }
+    .lista-menu{
+        margin: auto;
+        width: 85%;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .div-banner{
+        display: flex;
+        justify-content: center;
+    }
+    .banner{
+        width: 90%;
+        animation: agrandar 1s   infinite alternate ;
+        margin-bottom: 10px;
+    }
+    .banner:hover{
+        border: #e9ecf2 double 2px;
+    }
+    h2{
+        padding-top: 0.5cm;
+        position: relative;
+        animation: mover-a-lo-ancho 10s infinite  ;
+    }
+    h2:hover{
+    color: #EAC926;    }
+
+    @keyframes mover-a-lo-ancho {
+        0%{
+            left: -50px;
+        }
+        40%{
+            left: 600px;
+        }
+        60%{
+            left: 900px;
+        }
+        100%{
+            left:1900px
+        }
+    }
+
+    .container article:hover{
+        box-shadow: 0px 0px 10px rgb(13, 44, 218);
+        border-radius: 20px;
+    }
+    .Copyright:hover h3{
+        box-shadow: 0px 0px 10px rgb(218, 13, 13);
+        border-radius: 20px;
+        
+    }
+    .dinero{
+        display: block;
+        width: 2cm;
+        height: 2cm;
+        position: fixed;
+        border-radius: 20%;
+        bottom: 1cm;
+        left: 1cm;
+    }
+    .mi-dinero{
+        text-align: center;
+        display: block;
+        height: 2cm;
+        position: fixed;
+        border-radius: 20%;
+        bottom: 1.5cm;
+        left: 0.9cm;
+        color: orangered;
+    }
+    main{
+        position: relative;
+    }
+    @keyframes vuelta-mundo {
+        0
+    }
 }
