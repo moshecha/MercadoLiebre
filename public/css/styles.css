@@ -359,16 +359,11 @@ footer article {
 
     @keyframes mover-a-lo-ancho {
         0%{
-            left: -50px;
+            left: 50px;
         }
-        40%{
-            left: 600px;
-        }
-        60%{
-            left: 900px;
-        }
+        
         100%{
-            left:1900px
+            left:500px
         }
     }
 
@@ -403,7 +398,5 @@ footer article {
     main{
         position: relative;
     }
-    @keyframes vuelta-mundo {
-        0
-    }
+   
 }
