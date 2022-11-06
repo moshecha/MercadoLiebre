@@ -16,6 +16,7 @@ header{
     width: 100%;
     /* border:1px black solid; */
     position: fixed;
+    top: 0;
     z-index: 10;
     margin:auto;
     padding-top:10px;
@@ -352,7 +353,7 @@ footer article {
     h2{
         padding-top: 0.5cm;
         position: relative;
-        animation: mover-a-lo-ancho 10s infinite  ;
+        animation: agrandar 1s   infinite alternate ;
     }
     h2:hover{
     color: #EAC926;    }
