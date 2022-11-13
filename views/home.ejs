@@ -24,7 +24,7 @@
         <header> 
             <div class="items-header">
                     <div class="main-header-top-var">
-                        <img class="logo" src="/images/logo-mercado-liebre.svg" alt="logo-mercado-liebre" >
+                        <a class="link-home" href="/"><img onclick="" class="logo" src="/images/logo-mercado-liebre.svg" alt="logo-mercado-liebre" ></a>
                         <form class="form-buscador" action="/search">
                             <input type="search" name="buscador" id="buscador" placeholder="Buscas productos, marcas y mas">
                             <i id="iconoBusqueda" class="fa fa-search"></i>
@@ -62,111 +62,49 @@
                 <img class='banner' src="/images/img-home-banner.jpg" alt="img-home-banner" >
                 <img  class="dinero" src="/images/dinero.jpeg" alt="dinero">
                 <h5 class="mi-dinero">Mi Dinero</h5>
+                <h5 class="millon">U$S 100.000.000</h5>
             </div>
         <section>
         <h2>Basado en tu última visita</h2>
         <div class="card-ultimas-vistas">
-            <article>
-                <img src="images/img-cafetera-moulinex.jpg" alt="imagen de la cafetera" >
-                <div class="descripcion-de-foto">
-                <i class="fas fa-shipping-fast"></i>
-                <div class="div-precioYdescuento">
-                <h4 class= "precio">$6.770</h4>
-                <h4 class="descuento">40% OFF</h4>
-            </div>
-                <h3 class="descripcion">Cafetera Moulinex</h3>
-                </div>
-            </article>
+            
+            <% productos.forEach((element,i) => { %> 
+                <article >
+                    <img  src="<%= productos[i].imagen %> " alt="imagen de la cafetera" >
+                    <div class="descripcion-de-foto">
+                        <i class="fas fa-shipping-fast"></i>
+                        <div class="div-precioYdescuento">
+                            <h4 class= "precio"> <%= productos[i].precio %> </h4>
+                            <h4 class="descuento"><%= productos[i].descuento %> </h4>
+                        </div>
+                        <h3 class="descripcion"><%= productos[i].descripcion %>  </h3>
+                    </div>
+                </article>
+            <% })%> 
+              
 
-            <article>
-                <img src="/images/img-macbook-pro-2019.jpg" alt="imagen de MacBook" >
-                <div class="descripcion-de-foto">
-                    <i class="fas fa-shipping-fast"></i>
-                    <div class="div-precioYdescuento">
-                <h4 class= "precio">$230.000</h4>
-                <h4 class="descuento">20% off</h4>
-            </div>
-                <h3 class="descripcion">MacBook Pro 2019</h3>
-            </div>
-            </article>
-
-            <article>
-                <img src="/images/img-samsung-galaxy-s10.jpg" alt="imagen del Samsung Galaxy" >
-                <div class="descripcion-de-foto">
-                    <i class="fas fa-shipping-fast"></i>
-                    <div class="div-precioYdescuento">
-                <h4 class= "precio">$70.500</h4>
-                <h4 class="descuento">10% off</h4>
-            </div>
-                <h3 class="descripcion">Samsung Galaxy S10</h3>
-            </div>
-            </article>
-
-            <article>
-                <img src="/images/img-tv-samsung-smart.jpg" alt="imagen del SmartTv">
-                <div class="descripcion-de-foto">
-                    <i class="fas fa-shipping-fast"></i>
-                    <div class="div-precioYdescuento">
-                <h4 class= "precio">$23.200</h4>
-                <h4 class="descuento">5% off</h4>
-            </div>
-                <h3 class="descripcion">SmartTv Samsung 43"</h3>
-            </div>
-            </article>
         </div>
         </section>
 
         <section>
             <h2>Ofertas</h2>
             <div class="card-ofertas">
-            <article>
-                <img src="images/img-cafetera-moulinex.jpg" alt="imagen de la cafetera" >
-                <div class="descripcion-de-foto">
-                <i class="fas fa-shipping-fast"></i>
-                <div class="div-precioYdescuento">
-                <h4 class= "precio">$6.770</h4>
-                <h4 class="descuento">40% OFF</h4>
-            </div>
-                <h3 class="descripcion">Cafetera Moulinex</h3>
-                </div>
-            </article>
 
-            <article>
-                <img src="/images/img-macbook-pro-2019.jpg" alt="imagen de MacBook" >
-                <div class="descripcion-de-foto">
-                    <i class="fas fa-shipping-fast"></i>
-                    <!-- <i class="fas fa-truck"></i> este es mejor-->
-                    <div class="div-precioYdescuento">
-                <h4 class= "precio">$230.000</h4>
-                <h4 class="descuento">20% off</h4>
-            </div>
-                <h3 class="descripcion">MacBook Pro 2019</h3>
-            </div>
-            </article>
+                <% productos.forEach((element,i) => { %> 
+                    <article >
+                        <img  src="<%= productos[i].imagen %> " alt="imagen de la cafetera" >
+                        <div class="descripcion-de-foto">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div class="div-precioYdescuento">
+                                <h4 class= "precio"> <%= productos[i].precio %> </h4>
+                                <h4 class="descuento"><%= productos[i].descuento %> </h4>
+                            </div>
+                            <h3 class="descripcion"><%= productos[i].descripcion %>  </h3>
+                        </div>
+                    </article>
+                <% })%> 
 
-            <article>
-                <img src="/images/img-samsung-galaxy-s10.jpg" alt="imagen del Samsung Galaxy" >
-                <div class="descripcion-de-foto">
-                    <i class="fas fa-shipping-fast"></i>
-                    <div class="div-precioYdescuento">
-                <h4 class= "precio">$70.500</h4>
-                <h4 class="descuento">10% off</h4>
-            </div>
-                <h3 class="descripcion">Samsung Galaxy S10</h3>
-            </div>
-            </article>
-
-            <article>
-                <img src="/images/img-tv-samsung-smart.jpg" alt="imagen del SmartTv">
-                <div class="descripcion-de-foto">
-                    <i class="fas fa-shipping-fast"></i>
-                <div class="div-precioYdescuento">
-                    <h4 class= "precio">$23.200</h4>
-                    <h4 class="descuento">5% off</h4>
-                </div>
-                <h3 class="descripcion">SmartTv Samsung 43"</h3>
-            </div>
-            </article>
+           
             </section>
         </div>
         </main>
