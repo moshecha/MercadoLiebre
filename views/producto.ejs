@@ -64,53 +64,35 @@
                 <h5 class="mi-dinero">Mi Dinero</h5>
                 <h5 class="millon">U$S 100.000.000</h5>
             </div> -->
-
-<!--             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ogoGG-jg104" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ogoGG-jg104?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            
-            <video controls width="500px" height="400px" autoplay muted>
-                <source src="/images/videoTamar.mp4"  type="video/mp4">
-                no es compatible
-            </video>
-            <video controls width="500px" height="400px" autoplay muted>
-                <source src="/images/CharlieChaplin.webm"  type="video/webm">
-                no es compatible
-            </video>
-            <video controls width="500px" height="400px" autoplay muted>
-                <source src="/images/videoIntro.mp4"  type="video/mp4">
-                no es compatible
-            </video>
-
         <section>
-        <h2>Basado en tu última visita</h2>
+        <h2>Producto <%= idProducto %> </h2>
         <div class="card-ultimas-vistas">
             
-            <% productos.forEach((element,i) => { %> 
+            
                 <article >
-                    <a href="/producto/<%= productos[i].id %>">
-                    <img  src="<%= productos[i].imagen %> " alt="imagen de la cafetera" >
+                    
+                    <img  src="<%= productos[idProducto-1].imagen %> " alt="imagen de la cafetera" >
                     <div class="descripcion-de-foto">
                         <i class="fas fa-shipping-fast"></i>
                         <div class="div-precioYdescuento">
-                            <h4 class= "precio"> <%= productos[i].precio %> </h4>
-                            <h4 class="descuento"><%= productos[i].descuento %> </h4>
+                            <h4 class= "precio"> <%= productos[idProducto-1].precio %> </h4>
+                            <h4 class="descuento"><%= productos[idProducto-1].descuento %> </h4>
                         </div>
-                        <h3 class="descripcion"><%= productos[i].descripcion %>  </h3>
+                        <h3 class="descripcion"><%= productos[idProducto-1].descripcion %>  </h3>
                     </div>
-                </a></article>
+                </article>
                 
-            <% })%> 
-              
             
+              
+           
 
         </div>
         </section>
 
         <section>
-            <h2>Ofertas</h2>
-            <div class="card-ofertas">
-
+            <h2>Basado en tu última visita</h2>
+            <div class="card-ultimas-vistas">
+                
                 <% productos.forEach((element,i) => { %> 
                     <article >
                         <a href="/producto/<%= productos[i].id %>">
@@ -126,12 +108,12 @@
                     </a></article>
                     
                 <% })%> 
-
-               
-
-           
+                  
+                
+    
             </div>
             </section>
+        
         </main>
 
 
